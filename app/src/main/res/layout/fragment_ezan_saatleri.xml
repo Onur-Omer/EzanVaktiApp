@@ -1,0 +1,339 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/constraintLayoutGenel"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/home"
+    tools:context=".view.EzanSaatleri">
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floatingActionButtonLocation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:backgroundTint="#FFFFFF"
+        android:clickable="true"
+        android:contentDescription="@string/todo"
+        android:focusable="true"
+        android:src="@drawable/ic_location"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/floatingActionButton" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floatingActionButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#FFFFFF"
+        android:clickable="true"
+        android:contentDescription="@string/todo"
+        android:focusable="true"
+        android:src="@drawable/ic_outline_add_24"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floatingActionButtonMode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:backgroundTint="#FFFFFF"
+        android:clickable="true"
+        android:contentDescription="@string/todo"
+        android:focusable="true"
+        android:src="@drawable/ic_baseline_nights_stay_24"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/floatingActionButtonLocation" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:layout_marginBottom="128dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/constraintLayoutDown"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayoutDown"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/progressBar">
+
+        <LinearLayout
+            android:id="@+id/linearLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:visibility="visible"
+            app:layout_constraintBottom_toTopOf="@+id/constraintLayoutDown"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="NotSibling">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp"
+                android:background="@drawable/search_backraound"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/imsakTextView"
+                    android:layout_width="14dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="end"
+                    android:text="@string/msak"
+                    android:textColor="@color/textColor"
+                    android:textSize="24sp"
+                    app:drawableStartCompat="@drawable/sabah" />
+
+                <TextView
+                    android:id="@+id/imsakZamanTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="@string/zaman"
+                    android:textColor="@color/textColor"
+                    android:textSize="24sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/search_backraound"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/sabahTextView"
+                    android:layout_width="14dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="end"
+                    android:text="@string/sabah"
+                    android:textColor="@color/textColor"
+                    android:textSize="24sp"
+                    app:drawableStartCompat="@drawable/gunes" />
+
+                <TextView
+                    android:id="@+id/sabahZamanTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="@string/zaman"
+                    android:textColor="@color/textColor"
+                    android:textSize="24sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/search_backraound"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/ogleTextView"
+                    android:layout_width="14dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="end"
+                    android:text="@string/len"
+                    android:textColor="@color/textColor"
+                    android:textSize="24sp"
+                    app:drawableStartCompat="@drawable/ogle" />
+
+                <TextView
+                    android:id="@+id/ogleZamanTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="@string/zaman"
+                    android:textColor="@color/textColor"
+                    android:textSize="24sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/search_backraound"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/ikindiTextView"
+                    android:layout_width="14dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="end"
+                    android:text="@string/kindi"
+                    android:textColor="@color/textColor"
+                    android:textSize="24sp"
+                    app:drawableStartCompat="@drawable/ikindi" />
+
+                <TextView
+                    android:id="@+id/ikindiZamanTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="@string/zaman"
+                    android:textColor="@color/textColor"
+                    android:textSize="24sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/search_backraound"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/aksamTextView"
+                    android:layout_width="14dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="end"
+                    android:text="@string/ak_am"
+                    android:textColor="@color/textColor"
+                    android:textSize="24sp"
+                    app:drawableStartCompat="@drawable/aksam" />
+
+                <TextView
+                    android:id="@+id/aksamZamanTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="@string/zaman"
+                    android:textColor="@color/textColor"
+                    android:textSize="24sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/search_backraound"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/yatsiTextView"
+                    android:layout_width="14dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="end"
+                    android:text="@string/yats"
+                    android:textColor="@color/textColor"
+                    android:textSize="24sp"
+                    app:drawableStartCompat="@drawable/yatsi" />
+
+                <TextView
+                    android:id="@+id/yatsiZamanTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="@string/zaman"
+                    android:textColor="@color/textColor"
+                    android:textSize="24sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayoutUp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/constraintLayoutDown"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <TextView
+            android:id="@+id/konumTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="18dp"
+            android:layout_marginTop="17dp"
+            android:gravity="center"
+            android:text="@string/konum"
+            android:textAlignment="viewStart"
+            android:textColor="@color/textColor"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="RtlCompat" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="60dp"
+            android:background="@drawable/search_backraound"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/KalanZamanTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="11dp"
+                android:gravity="top|left"
+                android:text="@string/_00_00_00"
+                android:textColor="@color/textColor"
+                android:textSize="40sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="RtlHardcoded" />
+
+            <TextView
+                android:id="@+id/KalanYaziTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="7dp"
+                android:layout_marginBottom="12dp"
+                android:text="@string/sabah_namaz_na_kalan"
+                android:textColor="@color/textColor"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/KalanZamanTextView" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

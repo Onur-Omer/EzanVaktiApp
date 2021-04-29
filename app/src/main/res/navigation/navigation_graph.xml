@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_graph"
+    app:startDestination="@id/konumSecme">
+    <fragment
+        android:id="@+id/ezanSaatleri"
+        android:name="com.onuromer.ezanvakti.view.EzanSaatleri"
+        android:label="fragment_ezan_saatleri"
+        tools:layout="@layout/fragment_ezan_saatleri" >
+        <action
+            android:id="@+id/action_ezanSaatleri_to_konumSecme"
+            app:destination="@id/konumSecme" />
+    </fragment>
+    <fragment
+        android:id="@+id/konumSecme"
+        android:name="com.onuromer.ezanvakti.view.KonumSecme"
+        android:label="fragment_konum_secme"
+        tools:layout="@layout/fragment_konum_secme" >
+        <action
+            android:id="@+id/action_konumSecme_to_ezanSaatleri"
+            app:destination="@id/ezanSaatleri" />
+    </fragment>
+</navigation>

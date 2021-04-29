@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/konum_main_back"
+    tools:context=".view.KonumSecme">
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewFragment"
+        android:background="@drawable/konum_backround"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/searchEditText"
+        />
+
+    <EditText
+        android:background="@drawable/konum_backround"
+        android:id="@+id/searchEditText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="30dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="49dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="91dp"
+        android:drawableStart="@drawable/ic_baseline_search_24"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="@string/adresinizi_yaz_n_z"
+        android:textColorHint="@color/konum_text"
+        app:layout_constraintBottom_toTopOf="@+id/recyclerViewFragment"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:autofillHints="" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

@@ -1,0 +1,37 @@
+<resources>
+    <string name="app_name">Ezan Vakti</string>
+    <color name="card_bg_color">#f6f6f6</color>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="konum_de_i_tir">Konum Değiştir</string>
+    <string name="adresinizi_yaz_n_z">Adresinizi Yazınız…</string>
+    <string name="textview">TextView</string>
+    <string name="hicri_takvim">Hicri Takvim</string>
+    <string name="msak">İmsak :</string>
+    <string name="zaman">Zaman</string>
+    <string name="sabah">Güneş :</string>
+    <string name="len">Öğlen :</string>
+    <string name="kindi">İkindi :</string>
+    <string name="ak_am">Akşam :</string>
+    <string name="yats">Yatsı :</string>
+    <string name="konum">Konum</string>
+    <string name="_00_00_00">00:00:00</string>
+    <string name="sabah_namaz_na_kalan">Sabah Namazına Kalan</string>
+    <!-- Preference Titles -->
+    <string name="messages_header">Messages</string>
+    <string name="sync_header">Sync</string>
+
+    <!-- Messages Preferences -->
+    <string name="signature_title">Your signature</string>
+    <string name="reply_title">Default reply action</string>
+
+    <!-- Sync Preferences -->
+    <string name="sync_title">Sync email periodically</string>
+    <string name="attachment_title">Download incoming attachments</string>
+    <string name="attachment_summary_on">Automatically download attachments for incoming emails
+    </string>
+    <string name="attachment_summary_off">Only download attachments when manually requested</string>
+    <string name="todo">TODO</string>
+
+
+
+</resources>
